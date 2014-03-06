@@ -22,7 +22,7 @@ body {
   padding:0px;
 }
 
-#hheader {
+#header {
   position:fixed;
   top:0px;
   left:0px;
@@ -36,7 +36,7 @@ body {
   outline:1px solid #000; /* temp */
 }
 
-#ssubheader {
+#subheader {
   position:fixed;
   top:72px;
   /* left:218px; */
@@ -51,7 +51,7 @@ body {
   outline:1px solid #000; /* temp */
 }
 
-#mmain {
+#main {
   position:absolute;
   top:116px;
   left:220px;
@@ -60,13 +60,13 @@ body {
   /* height:calc(100% - 116px); */
   height:calc(100% - 118px);
   /* width:calc(100% - 218px); */
-  width:calc(100% - 216px);
+  width:calc(100% - 220px);
   overflow:auto; /* Note: for a contained iframe at 100% height and width, must set overflow:hidden locally in page
   otherwise there will be 2 vertical scroll bars (might be a browser bug). */
   outline:1px solid #000; /* temp */
 }
 
-#lleft {
+#left {
   position:absolute;
   top:72px;
   left:0px;
