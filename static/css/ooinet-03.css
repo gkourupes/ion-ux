@@ -22,7 +22,7 @@ body {
   padding:0px;
 }
 
-#header {
+#hheader {
   position:fixed;
   top:0px;
   left:0px;
@@ -36,7 +36,7 @@ body {
   outline:1px solid #000; /* temp */
 }
 
-#subheader {
+#ssubheader {
   position:fixed;
   top:72px;
   /* left:218px; */
@@ -51,7 +51,7 @@ body {
   outline:1px solid #000; /* temp */
 }
 
-#main {
+#mmain {
   position:absolute;
   top:116px;
   left:218px;
@@ -66,7 +66,7 @@ body {
   outline:1px solid #000; /* temp */
 }
 
-#left {
+#lleft {
   position:absolute;
   top:72px;
   left:0px;
