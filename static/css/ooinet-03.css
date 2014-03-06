@@ -1,7 +1,7 @@
 /*
 ooinet-03.css
 by Peter Rosti
-last edited 03-05 2014-03-03
+last edited 03-06 03-05 2014-03-03
 
 This layout uses calc() to set height and width values
 Note: calc must have spaces in the formula, to accomodate IE bug,
@@ -28,10 +28,12 @@ body {
   left:0px;
   margin:0px;
   padding:0px;
-  width:100%;
-  height:72px;
+  /* width:100%; */
+  width:calc(100% - 2px);
+  /* height:72px; */
+  height:70px;
   z-index:1;
-  /* outline:1px solid #000; */ /* temp */
+  outline:1px solid #000; /* temp */
 }
 
 #subheader {
@@ -40,10 +42,12 @@ body {
   left:0px;
   margin:0px;
   padding:0px;
-  width:calc(100% - 218px);
-  height:44px;
+  /* width:calc(100% - 218px); */
+  width:calc(100% - 220px);
+  /* height:44px; */
+  height:42px;
   z-index:1;
-  /* outline:1px solid #000; */ /* temp */
+  outline:1px solid #000; /* temp */
 }
 
 #main {
@@ -52,19 +56,23 @@ body {
   left:218px;
   padding:0px;
   margin:0px;
-  height:calc(100% - 146px);
-  width:calc(100% - 200px);
+  /* height:calc(100% - 146px); */
+  height:calc(100% - 148px);
+  /* width:calc(100% - 218px); */
+  width:calc(100% - 216px);
   overflow:auto; /* Note: for a contained iframe at 100% height and width, must set overflow:hidden locally in page
   otherwise there will be 2 vertical scroll bars (might be a browser bug). */
-  /*outline:1px solid #000; */ /* temp */
+  outline:1px solid #000; /* temp */
 }
 
 #left {
   position:absolute;
   top:72px;
   left:0px;
-  height:calc(100% - 72px);
-  width:218px;
+  /* height:calc(100% - 72px); */
+  height:calc(100% - 74px);
+  /* width:218px; */
+  width:216px;
   overflow:auto;
-  /* outline:1px solid #000; */ /* temp */
+  outline:1px solid #000; /* temp */
 }
