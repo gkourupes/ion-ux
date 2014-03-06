@@ -39,7 +39,8 @@ body {
 #subheader {
   position:fixed;
   top:72px;
-  left:0px;
+  /* left:218px; */
+  left:220px;
   margin:0px;
   padding:0px;
   /* width:calc(100% - 218px); */
@@ -56,8 +57,8 @@ body {
   left:218px;
   padding:0px;
   margin:0px;
-  /* height:calc(100% - 146px); */
-  height:calc(100% - 148px);
+  /* height:calc(100% - 116px); */
+  height:calc(100% - 118px);
   /* width:calc(100% - 218px); */
   width:calc(100% - 216px);
   overflow:auto; /* Note: for a contained iframe at 100% height and width, must set overflow:hidden locally in page
