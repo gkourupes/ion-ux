@@ -77,3 +77,24 @@ body {
   overflow:auto;
   outline:1px solid #000; /* temp */
 }
+
+.white_body {
+  background-color: #FFFFFF;
+}
+
+.centered_text {
+  text-align: center;
+}
+
+.grey_border {
+  border: 1px solid #888888;
+  margin: 2px;
+}
+
+.rounded_border {
+  border-radius: 6px;
+}
+
+.pointer_cursor {
+  cursor:pointer;
+}

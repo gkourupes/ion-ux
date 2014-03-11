@@ -43,6 +43,16 @@ IONUX.Models.Search = Backbone.Model.extend({
     }
 });
 
+IONUX.Models.TestDynamic = Backbone.Model.extend({
+  url: "/test/dynamic_page",
+  parse: function(resp){
+    console.log('got response.');
+    console.log(resp);
+    this.html = resp;
+    return resp;
+  }
+});
+
 // For use with collections of Resource Types, i.e. InstrumentDevice, PlatformDevice, etc.
 IONUX.Models.Session = Backbone.Model.extend({
     defaults: {

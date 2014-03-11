@@ -819,6 +819,13 @@ def chart(resource_id=None):
 def dev_image(resource_id=None):
     return render_template('dev_image.html')
 
+# -----------------------------------------------------------------------------
+# TEST ROUTES
+# -----------------------------------------------------------------------------
+
+@app.route('/test/dynamic_page', methods=['GET'])
+def dynamic_test():
+    return render_template('test_page.html')
 
 # -----------------------------------------------------------------------------
 # CATCH ANY UNMATCHED ROUTES

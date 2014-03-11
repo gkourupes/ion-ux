@@ -14,6 +14,17 @@ IONUX = {
     var router = new IONUX.Router();
     IONUX.ROUTER = router;
     IONUX.setup_ajax_error();
+
+    console.log('fetching test page');
+    IONUX.TESTDYNAMIC_MODEL = new IONUX.Models.TestDynamic();
+    IONUX.TESTDYNAMIC_MODEL.fetch({
+      async: false, // Don't allow anything to fire until this is done!  Without this, links straight to facepages weren't initting right.
+      dataType: 'html',
+      success: function(resp) {
+        console.log('got data.');
+        new IONUX.Views.Dynamic().render();
+      }
+    });
         
     // Bootstrap navigation menu
     $.ajax({
@@ -92,7 +103,8 @@ IONUX = {
     return router;
   },
   setup_ajax_error: function(){
-    $(document).ajaxError(function(evt, resp){
+    $(document).ajaxError(function(evt, resp, settings, exception){
+      console.log(exception);
       try {
         var json_obj = JSON.parse(resp['responseText'])
         var error_obj = null;

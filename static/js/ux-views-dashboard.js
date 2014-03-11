@@ -104,6 +104,15 @@ IONUX.Views.ResourceSelector = Backbone.View.extend({
   }
 });
 
+IONUX.Views.Dynamic = Backbone.View.extend({
+  el: '#dynamic-load-container',
+  render: function(){
+    console.log('getting html from model hopefully');
+    contents = IONUX.TESTDYNAMIC_MODEL.html;
+    this.$el.html(contents);
+    return this;
+  }
+});
 
 IONUX.Views.ObservatorySelector = IONUX.Views.ResourceSelector.extend({
   el: '#observatory-selector',
