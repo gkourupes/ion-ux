@@ -47,7 +47,6 @@ IONUX.Models.TestDynamic = Backbone.Model.extend({
   url: "/test/dynamic_page",
   parse: function(resp){
     console.log('got response.');
-    console.log(resp);
     this.html = resp;
     return resp;
   }

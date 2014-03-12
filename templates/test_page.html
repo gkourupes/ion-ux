@@ -1,0 +1,13 @@
+<div id="test_dynamic_div" class="white_body grey_border rounded_border centered_text pointer_cursor">
+	Hello World!
+</div>
+
+<script type='text/javascript'>
+	$(function(){
+		$("#test_dynamic_div").click(function(e){
+			$(this).append($('<div/>',{
+				text : "I'm here!"
+			}));
+		});
+	});
+</script>

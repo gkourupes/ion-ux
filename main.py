@@ -828,6 +828,38 @@ def dynamic_test():
     return render_template('test_page.html')
 
 # -----------------------------------------------------------------------------
+# TUTORIAL ROUTES
+# -----------------------------------------------------------------------------
+
+@app.route('/tutorial', methods=['GET'])
+def tutorial_frame():
+    return render_template('backbone_tutorial_frame.html')
+
+@app.route('/tutorial/header', methods=['GET'])
+def tutorial_header():
+    return render_template('backbone_tutorial_header.html')
+
+@app.route('/tutorial/topbar', methods=['GET'])
+def tutorial_topbar():
+    return render_template('partials/topbar.html')
+
+@app.route('/tutorial/menu', methods=['GET'])
+def tutorial_menu():
+    return render_template('backbone_tutorial_menu.html')
+
+@app.route('/tutorial/subheader', methods=['GET'])
+def tutorial_subheader():
+    return render_template('backbone_tutorial_subheader.html')
+
+@app.route('/tutorial/view1', methods=['GET'])
+def tutorial_view1():
+    return render_template('backbone_tutorial_view1.html')
+
+@app.route('/tutorial/view2', methods=['GET'])
+def tutorial_view2():
+    return render_template('backbone_tutorial_view2.html')
+
+# -----------------------------------------------------------------------------
 # CATCH ANY UNMATCHED ROUTES
 # -----------------------------------------------------------------------------
 

@@ -1,0 +1,46 @@
+<div id="nav_menu" class="white_body grey_border rounded_border">
+	<h3>Menu</h3>
+	<ul>
+	</ul>
+</div>
+
+<script type="text/javascript">
+	$(function(){
+		// create div element with class pointer_cursor and View1 text contents.
+		div = $('<div/>',{
+			text: 'View1',
+			class: 'pointer_cursor'
+		});
+
+		li = $('<li/>');
+		li.append(div);
+		li.click(function(){
+		    TUTORIAL_UX.Models.MainInstance.fetch({
+		      async: false,
+		      dataType: 'html',
+		      url: '/tutorial/view1'
+		    });
+		});
+
+		$("#nav_menu").find("ul").append(li);
+
+
+		div = $('<div/>',{
+			text: 'View2',
+			class: 'pointer_cursor'
+		});
+
+		li = $('<li/>');
+		li.append(div);
+		li.click(function(){
+		    TUTORIAL_UX.Models.MainInstance.fetch({
+		      async: false,
+		      dataType: 'html',
+		      url: '/tutorial/view2'
+		    });
+		});
+
+		$("#nav_menu").find("ul").append(li);
+
+	});
+</script>

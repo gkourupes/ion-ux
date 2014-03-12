@@ -1,0 +1,12 @@
+<div style="float:left;">
+	<a href="http://www.oceanobservatories.org/" title="Ocean Observatories Initiative"><img id="ooi-logo" src="/static/img/newbanner_ooilogo.png" alt="OOI" /></a>
+</div>
+<div id="topbar" class="user-nav"> </div> <!-- User navigation -->
+
+<script type="text/javascript">
+	$(function(){
+	    TUTORIAL_UX.Models.TopbarInstance = new TUTORIAL_UX.Models.Topbar();
+	    TUTORIAL_UX.Views.TopbarInstance = new TUTORIAL_UX.Views.Topbar({model: TUTORIAL_UX.Models.TopbarInstance});
+	    TUTORIAL_UX.Models.TopbarInstance.update();
+	});
+</script>
