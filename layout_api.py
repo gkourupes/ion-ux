@@ -39,7 +39,7 @@ class LayoutApi(object):
         # Load template and find 'body' for template appendation
         env = Environment()
         env.loader = FileSystemLoader(PORTAL_ROOT+'/templates')
-        tmpl_unparsed = env.get_template('ion_ux.html').render(static_assets=STATIC_ASSETS)
+        tmpl_unparsed = env.get_template('ion_ux3.html').render(static_assets=STATIC_ASSETS)
         tmpl = ET.fromstring(tmpl_unparsed.encode('utf-8'))
         body_elmt = tmpl.find('body')
 
