@@ -4,47 +4,43 @@ last edited 04-13 04-09 03-05 2014-03-02
 -->
 <html>
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <link rel="stylesheet" href="/static/bootstrap/less/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="/static/css/ooinet-04.css"/>
     <title>OOINet</title>
 
-    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
-    <!-- <link rel="stylesheet" href="/static/css/jquery-ui-1.8.6.custom.css" type="text/css" /> -->
-    <link rel="stylesheet" href="/static/css/jscrollpane.css" type="text/css" />
-    <link rel="stylesheet" href="/static/css/bootstrap-datepicker.css" type="text/css" />
-    <link rel="stylesheet" href="/static/bootstrap/less/bootstrap.min.css" type="text/css" />
-    <link href='http://fonts.googleapis.com/css?family=Signika:300,400,600,700' rel='stylesheet' type='text/css'/>
-    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700' rel='stylesheet' type='text/css' />
+    <!-- Vendor JavaScripts -->
+    <script src="/static/js/jquery-1.9.1.min.js"> </script>
 
+    <script src="/static/js/underscore-1.4.4.min.js "> </script>
+    <script src="/static/js/backbone-1.0.min.js"> </script>
+    <script src="/static/js/bootstrap.min.js"> </script>
+    <script src="/static/js/backbone.bootstrap-modal.js"> </script>
 
-    <link rel="stylesheet" href="/static/css/common.css" type="text/css" />
-
-    {% if static_assets %}
-        <link rel="stylesheet" class="pepper" href="/static/css/pepper_images.css" disabled="true" />
-        <link rel="stylesheet" class="salt" href="/static/css/salt_images.css" />
-    {% else %}
-        <link rel="stylesheet/less" class="pepper" href="/static/css/pepper_images.less" disabled="true" />
-        <link rel="stylesheet/less" class="salt" href="/static/css/salt_images.less" />
-    {% endif %}
-
-    <link rel="stylesheet" class="pepper" href="/static/css/pepper.css" type="text/css" disabled="true" />
-    <link rel="stylesheet" class="salt" href="/static/css/salt.css" type="text/css"/>
-    
-    <link rel="stylesheet" type="text/css" href="styles/ooinet-04.css">
-    {% block extra_css %}{% endblock %}
+    <!-- UX JavaScripts --> 
+    <script src="/static/js/ion_ux2.js"> </script>
+    <script src="/static/js/ux_bootstrap_models2.js"> </script>
+    <script src="/static/js/ux_bootstrap_views2.js"> </script>
 </head>
 
 <body>
-	<div id="header" align="center">header</div>
-	<div id="left-subheader" align="center">left-subheader</div>
-	<div id="main-subheader" align="left">main-subheader</div>
+	<div id="header" align="left">header</div>
+	<div id="leftSubheader" align="center">leftSubheader</div>
+	<div id="mainSubheader" align="left">mainSubheader</div>
 
     <div id="left">left side menu here<br />
     </div>
     <div id="main">
-       <div id="upper-main">&nbsp;
+       <div id="upperMain">
 	   </div>
-	   <div id="lower-main">&nbsp;
+	   <div id="lowerMain">
 	   </div>
 	</div>
+
+    <script>
+      $(function(){
+        IONUX.init();
+      });
+    </script>
 </body>
 </html>
