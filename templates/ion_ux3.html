@@ -5,39 +5,74 @@ last edited 04-13 04-09 03-05 2014-03-02
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link rel="shortcut icon" type="image/x-icon" href="/static/favicon.ico" />
+    <!-- <link rel="stylesheet" href="/static/css/jquery-ui-1.8.6.custom.css" type="text/css" /> -->
+    <link rel="stylesheet" href="/static/css/jscrollpane.css" type="text/css" />
+    <link rel="stylesheet" href="/static/css/bootstrap-datepicker.css" type="text/css" />
     <link rel="stylesheet" href="/static/bootstrap/less/bootstrap.min.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Signika:300,400,600,700' rel='stylesheet' type='text/css'/>
+    <link href='http://fonts.googleapis.com/css?family=Signika+Negative:300,400,600,700' rel='stylesheet' type='text/css' />
+
+
+    <link rel="stylesheet" href="/static/css/common.css" type="text/css" />
+
+    {% if static_assets %}
+        <link rel="stylesheet" class="pepper" href="/static/css/pepper_images.css" disabled="true" />
+        <link rel="stylesheet" class="salt" href="/static/css/salt_images.css" />
+    {% else %}
+        <link rel="stylesheet/less" class="pepper" href="/static/css/pepper_images.less" disabled="true" />
+        <link rel="stylesheet/less" class="salt" href="/static/css/salt_images.less" />
+    {% endif %}
+
+    <link rel="stylesheet" class="pepper" href="/static/css/pepper.css" type="text/css" disabled="true" />
+    <link rel="stylesheet" class="salt" href="/static/css/salt.css" type="text/css"/>
+    
+    {% block extra_css %}{% endblock %}
+
     <link rel="stylesheet" type="text/css" href="/static/css/ooinet-04.css"/>
     <title>OOINet</title>
 
-    <!-- Vendor JavaScripts -->
-    <script src="/static/js/jquery-1.9.1.min.js"> </script>
-
-    <script src="/static/js/underscore-1.4.4.min.js "> </script>
-    <script src="/static/js/backbone-1.0.min.js"> </script>
-    <script src="/static/js/bootstrap.min.js"> </script>
-    <script src="/static/js/backbone.bootstrap-modal.js"> </script>
-
-    <!-- UX JavaScripts --> 
-    <script src="/static/js/ion_ux2.js"> </script>
-    <script src="/static/js/ux_bootstrap_models2.js"> </script>
-    <script src="/static/js/ux_bootstrap_views2.js"> </script>
 </head>
 
 <body>
 	<div id="header" align="left">
-		<img id="img_a" src="/static/img/ooinet-header-background-02.png" alt="background" border="0" />
-	      <div>
+	      <div style="position:absolute; z-index:0;width:100%;">
+			<img id="img_a" src="/static/img/ooinet-header-background-02.png" alt="background" border="0" />
 	        <a href="http://www.oceanobservatories.org/" title="Ocean Observatories Initiative"><img id="ooi-logo" src="/static/img/newbanner_ooilogo.png" alt="OOI" /></a>
 	      </div>
-	      <div id="topbar" class="span6 user-nav"> </div> <!-- User navigation -->
+	      <div id="topbar" class="span6 user-nav" style="position:absolute;z-index:4;"> </div> <!-- User navigation -->
 	</div>
 	<div id="leftSubheader" align="center">leftSubheader</div>
 	<div id="mainSubheader" align="left">mainSubheader</div>
 
-    <div id="left">left side menu here<br />
+    <div id="left">
+
+          <div class="map-view" style="display:none;">
+            <div id="observatory-selector" class=""> </div>
+            <h3 id="map-filter-heading">Filter</h3>
+            <div id="map-asset-data-menu" class="" style=""> </div>
+            <div id="map-data-filter" class="dataproduct-mode"> </div>
+            <div id="map-filter" class="asset-mode" style="display:none;"> </div>
+          </div> <!-- .map-view -->
+
+          <div class="resources-view" style="display:none;">
+            <div id="org-selector" class="resources-view" style=""> </div>
+            <div id="list-filter" class="resources-view" style=""> </div>
+          </div> <!-- .resources-view -->
+
+          <div class="nsf-ol">
+            <div class="logos">
+              <div class="nsf"> </div>
+              <div class="ol"> </div>
+            </div>
+            <div class="about">
+              Funding for the <a href="http://www.oceanobservatories.org/" target="OOI">Ocean Observatories Initiative</a> is provided by the <a href="http://www.nsf.gov" target="NSF">National Science Foundation</a> through a Cooperative Agreement with the <a href="http://www.oceanleadership.org/" target="COL">Consortium for Ocean Leadership</a>.
+            </div>
+          </div> <!-- .nsf-ol -->
     </div>
     <div id="main">
-        <div id="dynamic-container" class="span10" style="display:none;height:100%"> </div>    	
+        <div id="dynamic-container" style="display:none;height:100%"> </div>    	
 	</div>
         <!-- <div id="footer"> </div> -->
         <script type="text/template" id="dashboard-map-tmpl">
