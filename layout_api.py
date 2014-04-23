@@ -64,7 +64,7 @@ class LayoutApi(object):
             script_elmt = _make_element(body_elmt, 'script', id=view_id, type='text/template')
             
             # heading_elmt = _make_element(script_elmt, 'div', css='row-fluid heading')
-            v00_elmt = _make_element(script_elmt, 'div', css='v00 heading')
+            v00_elmt = _make_element(script_elmt, 'div', css='v00 heading', style='display:none;')
             
             content_elmt = _make_element(script_elmt, 'div', css='row-fluid')
             v01_elmt = _make_element(content_elmt, 'div', css='v01 span3')
